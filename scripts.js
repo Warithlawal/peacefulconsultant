@@ -28,3 +28,35 @@ navLinks.forEach(link => {
     }
   });
 });
+
+
+const contactForm = document.getElementById('applicationForm'),
+      contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_8d7h6zn', 'template_cpblplr', contactForm, 'TxiivKvfYJwC4ym4u')
+    .then(() => {
+        contactMessage.style.display = 'block'; // Show success message
+        contactMessage.innerHTML = '<span>Message Successfully Sent</span>';
+
+        setTimeout(() => {
+            contactMessage.style.display = 'none';
+            contactMessage.innerHTML = ''; // Clear the message
+        }, 5000);
+
+        contactForm.reset();
+    })
+    .catch((error) => {
+        contactMessage.style.display = 'block'; // Show error message
+        contactMessage.innerHTML = '<img src="images/error.png" alt="Error"><span>Failed to send application. Please try again later.</span>';
+
+        setTimeout(() => {
+            contactMessage.style.display = 'none';
+            contactMessage.innerHTML = ''; // Clear the message
+        }, 5000);
+    });
+};
+
+contactForm.addEventListener('submit', sendEmail);

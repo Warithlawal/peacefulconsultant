@@ -557,6 +557,19 @@ header {
   	background: #005fa3;
 }
 
+.contact_message {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  display: none;
+}
+
 .info-container {
   	display: flex;
   	flex-direction: column;
