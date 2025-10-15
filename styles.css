@@ -204,10 +204,19 @@ header {
 	letter-spacing: 0.5px;
 }
 
-.mission-details ul {
+.lists {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+}
+
+.lists-child {
+	display: flex;
+	gap: 10px;
+}
+
+.lists-child i {
+		color: #0284C7;
 }
 
 .mission-details ul li {
@@ -291,9 +300,19 @@ header {
 	font-size: 20px;
 }
 
-.services-grid p {
+.services-grid ul {
 	font-size: 16px;
 	line-height: 22px;
+}
+
+.services-grid ul li {
+	list-style: none;
+		text-align: left;
+}
+
+.services-grid ul li i {
+	font-size: 16px;
+	margin-right: 10px;
 }
 
 .services-grid i {
